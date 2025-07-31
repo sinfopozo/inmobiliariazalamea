@@ -18,9 +18,27 @@
       padding: 40px 20px;
       text-align: center;
     }
-    main {
+    nav {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
       padding: 40px 20px;
       text-align: center;
+    }
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      border: 0;
     }
     footer {
       background-color: #333;
@@ -37,14 +55,39 @@
   <p>Encuentra tu próximo hogar con nosotros</p>
 </header>
 
-<main>
-  <h2>¡Bienvenido!</h2>
-  <p>Próximamente publicaremos nuestras propiedades disponibles.</p>
-</main>
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#alquiler">Alquiler</a>
+  <a href="#venta">Venta</a>
+</nav>
+
+<section id="inicio">
+  <h2>Bienvenido</h2>
+  <p>Gracias por visitar Inmobiliaria Zalamea. Contáctanos o visítanos.</p>
+  <p><strong>Contacto:</strong> inmobiliariazalamea@gmail.com</p>
+  <p><strong>Teléfono:</strong> 636 586 791</p>
+  <p><strong>Ubicación:</strong> Plaza Calderón de la Barca, 27</p>
+  <iframe
+    src="https://www.google.com/maps?q=Plaza+Calderón+de+la+Barca,+27&output=embed"
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
+</section>
+
+<section id="alquiler">
+  <h2>Propiedades en Alquiler</h2>
+  <p>Próximamente publicaremos nuestras propiedades disponibles en alquiler.</p>
+</section>
+
+<section id="venta">
+  <h2>Propiedades en Venta</h2>
+  <p>Próximamente publicaremos nuestras propiedades disponibles en venta.</p>
+</section>
 
 <footer>
-  <p>Contacto: albroksa@zalamea.com | Tel: 636 586 791</p>
+  <p>Contacto: inmobiliariazalamea@gmail.com | Tel: 636 586 791</p>
 </footer>
 
 </body>
 </html>
+
