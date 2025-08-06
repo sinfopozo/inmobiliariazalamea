@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inmobiliaria Zalamea</title>
   <style>
     body {
@@ -15,29 +15,47 @@
     header {
       background-color: red;
       color: white;
-      padding: 40px 20px;
+      padding: 20px;
       text-align: center;
+    }
+    header .header-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    header img {
+      width: 120px;
+      max-width: 100%;
+      height: auto;
+    }
+    header h1 {
+      font-size: 36px;
+      margin: 0;
     }
     nav {
       background-color: #222;
       color: white;
       text-align: center;
       padding: 15px 0;
+      flex-wrap: wrap;
     }
     nav a {
+      display: inline-block;
       color: white;
-      margin: 0 20px;
+      margin: 5px 15px;
       text-decoration: none;
       font-weight: bold;
     }
     section {
-      padding: 40px 20px;
+      padding: 20px;
       text-align: center;
     }
     iframe {
       width: 100%;
       max-width: 600px;
-      height: 350px;
+      height: 300px;
       border: 0;
     }
     footer {
@@ -63,15 +81,24 @@
     a:hover {
       text-decoration: underline;
     }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+      nav {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-    <img src="FOTO3.png" alt="Logo" width="150">
+  <div class="header-content">
+    <img src="FOTO3.png" alt="Logo" />
     <div>
-      <h1 style="font-size: 48px; margin: 0;">Inmobiliaria Zalamea</h1>
+      <h1>Inmobiliaria Zalamea</h1>
       <p>Encuentra tu próximo hogar con nosotros</p>
     </div>
   </div>
@@ -86,25 +113,15 @@
 <section id="inicio">
   <h2>Bienvenido</h2>
   <p>Gracias por visitar Inmobiliaria Zalamea. Contáctanos o visítanos.</p>
-  
-  <p>📧 <strong>Correo:</strong> 
-    <a href="mailto:inmobiliariazalamea@gmail.com">inmobiliariazalamea@gmail.com</a>
-  </p>
-
-  <p>📞 <strong>Teléfono:</strong> 
-    <a href="tel:+34636586791">636 586 791</a>
-  </p>
-
+  <p>📧 <strong>Correo:</strong> <a href="mailto:inmobiliariazalamea@gmail.com">inmobiliariazalamea@gmail.com</a></p>
+  <p>📞 <strong>Teléfono:</strong> <a href="tel:+34636586791">636 586 791</a></p>
   <p>📍 <strong>Ubicación:</strong> Plaza Calderón de la Barca, 27, 06430 Zalamea de la Serena</p>
-
   <p>📲 También puedes encontrarnos en Instagram. Haz clic aquí abajo:</p>
-  
   <p>
     <a class="instagram-button" href="https://instagram.com/inmobiliariazalamea" target="_blank">
       Síguenos en Instagram
     </a>
   </p>
-
   <iframe
     src="https://www.google.com/maps?q=Plaza+Calderón+de+la+Barca,+27,+06430+Zalamea+de+la+Serena,+Badajoz&output=embed"
     allowfullscreen
