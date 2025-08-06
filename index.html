@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inmobiliaria Zalamea</title>
   <style>
     body {
@@ -27,15 +27,22 @@
     }
     header img {
       width: 120px;
+      max-width: 100%;
       height: auto;
+    }
+    header h1 {
+      font-size: 36px;
+      margin: 0;
     }
     nav {
       background-color: #222;
       color: white;
       text-align: center;
       padding: 15px 0;
+      flex-wrap: wrap;
     }
     nav a {
+      display: inline-block;
       color: white;
       margin: 5px 15px;
       text-decoration: none;
@@ -43,6 +50,13 @@
     }
     section {
       padding: 20px;
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: 0;
     }
     footer {
       background-color: #333;
@@ -60,60 +74,14 @@
       font-weight: bold;
       margin-top: 10px;
     }
-
-    /* Tarjetas de propiedades */
-    .property-card {
-      display: flex;
-      flex-direction: column;
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+    a {
+      color: #0066cc;
+      text-decoration: none;
     }
-
-    .property-card img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+    a:hover {
+      text-decoration: underline;
     }
-
-    .property-content {
-      padding: 20px;
-    }
-
-    .property-content h3 {
-      margin-top: 0;
-    }
-
-    .property-price {
-      font-size: 24px;
-      font-weight: bold;
-      color: #2e7d32;
-      margin-bottom: 10px;
-    }
-
-    .property-info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 10px 0;
-    }
-
-    .property-info span {
-      background-color: #efefef;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-
-    .property-description {
-      margin-top: 10px;
-    }
-
+    /* Responsive */
     @media (max-width: 600px) {
       header h1 {
         font-size: 24px;
@@ -148,12 +116,17 @@
   <p>📧 <strong>Correo:</strong> <a href="mailto:inmobiliariazalamea@gmail.com">inmobiliariazalamea@gmail.com</a></p>
   <p>📞 <strong>Teléfono:</strong> <a href="tel:+34636586791">636 586 791</a></p>
   <p>📍 <strong>Ubicación:</strong> Plaza Calderón de la Barca, 27, 06430 Zalamea de la Serena</p>
-  <p>📲 También puedes encontrarnos en Instagram:</p>
-  <a class="instagram-button" href="https://instagram.com/inmobiliariazalamea" target="_blank">Síguenos en Instagram</a>
+  <p>📲 También puedes encontrarnos en Instagram. Haz clic aquí abajo:</p>
+  <p>
+    <a class="instagram-button" href="https://instagram.com/inmobiliariazalamea" target="_blank">
+      Síguenos en Instagram
+    </a>
+  </p>
   <iframe
     src="https://www.google.com/maps?q=Plaza+Calderón+de+la+Barca,+27,+06430+Zalamea+de+la+Serena,+Badajoz&output=embed"
-    width="100%" height="300" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy">
-  </iframe>
+    allowfullscreen
+    loading="lazy"
+  ></iframe>
 </section>
 
 <section id="fincas-rusticas">
@@ -163,10 +136,13 @@
 
 <section id="fincas-urbanas">
   <h2>Fincas Urbanas</h2>
+  <p>Próximamente publicaremos nuestras fincas urbanas disponibles para la venta.</p>
+</section>
 
-  <!-- Propiedad: Casa en Calle San Francisco -->
-  <div class="property-card">
-    <img src="fotos/foto-casa-1.1.jpg" alt="Fachada de la casa en venta">
-    <img src="fotos/foto-casa-1.2.jpg" alt="Interior de la casa en venta">
-    <div class="property-content">
-      <div cl
+<footer>
+  <p>📧 inmobiliariazalamea@gmail.com | 📞 636 586 791</p>
+</footer>
+
+</body>
+</html>
+
