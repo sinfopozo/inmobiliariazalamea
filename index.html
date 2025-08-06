@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inmobiliaria Zalamea</title>
   <style>
     body {
@@ -27,22 +27,15 @@
     }
     header img {
       width: 120px;
-      max-width: 100%;
       height: auto;
-    }
-    header h1 {
-      font-size: 36px;
-      margin: 0;
     }
     nav {
       background-color: #222;
       color: white;
       text-align: center;
       padding: 15px 0;
-      flex-wrap: wrap;
     }
     nav a {
-      display: inline-block;
       color: white;
       margin: 5px 15px;
       text-decoration: none;
@@ -50,13 +43,6 @@
     }
     section {
       padding: 20px;
-      text-align: center;
-    }
-    iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 300px;
-      border: 0;
     }
     footer {
       background-color: #333;
@@ -74,14 +60,60 @@
       font-weight: bold;
       margin-top: 10px;
     }
-    a {
-      color: #0066cc;
-      text-decoration: none;
+
+    /* Tarjetas de propiedades */
+    .property-card {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .property-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
-    /* Responsive */
+
+    .property-content {
+      padding: 20px;
+    }
+
+    .property-content h3 {
+      margin-top: 0;
+    }
+
+    .property-price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .property-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 10px 0;
+    }
+
+    .property-info span {
+      background-color: #efefef;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .property-description {
+      margin-top: 10px;
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 24px;
@@ -116,17 +148,12 @@
   <p>📧 <strong>Correo:</strong> <a href="mailto:inmobiliariazalamea@gmail.com">inmobiliariazalamea@gmail.com</a></p>
   <p>📞 <strong>Teléfono:</strong> <a href="tel:+34636586791">636 586 791</a></p>
   <p>📍 <strong>Ubicación:</strong> Plaza Calderón de la Barca, 27, 06430 Zalamea de la Serena</p>
-  <p>📲 También puedes encontrarnos en Instagram. Haz clic aquí abajo:</p>
-  <p>
-    <a class="instagram-button" href="https://instagram.com/inmobiliariazalamea" target="_blank">
-      Síguenos en Instagram
-    </a>
-  </p>
+  <p>📲 También puedes encontrarnos en Instagram:</p>
+  <a class="instagram-button" href="https://instagram.com/inmobiliariazalamea" target="_blank">Síguenos en Instagram</a>
   <iframe
     src="https://www.google.com/maps?q=Plaza+Calderón+de+la+Barca,+27,+06430+Zalamea+de+la+Serena,+Badajoz&output=embed"
-    allowfullscreen
-    loading="lazy"
-  ></iframe>
+    width="100%" height="300" style="border:0; margin-top:20px;" allowfullscreen="" loading="lazy">
+  </iframe>
 </section>
 
 <section id="fincas-rusticas">
@@ -136,7 +163,45 @@
 
 <section id="fincas-urbanas">
   <h2>Fincas Urbanas</h2>
-  <p>Próximamente publicaremos nuestras fincas urbanas disponibles para la venta.</p>
+
+  <!-- Propiedad 1 -->
+  <div class="property-card">
+    <img src="fotos/foto-casa-1.1.jpg" alt="Fachada de la casa">
+    <div class="property-content">
+      <div class="property-price">€ 180.000</div>
+      <h3>Calle San Francisco 12, Zalamea de la Serena</h3>
+      <div class="property-info">
+        <span>6 habitaciones</span>
+        <span>3 baños</span>
+        <span>274 m²</span>
+        <span>Terraza</span>
+        <span>Patio interior</span>
+      </div>
+      <div class="property-description">
+        Vivienda reformada y lista para entrar a vivir. Con dos salones, cocina equipada, trastero, terraza soleada y excelente ubicación en el centro de Zalamea. ¡Oportunidad única!
+      </div>
+    </div>
+  </div>
+
+  <!-- Propiedad 2 -->
+  <div class="property-card">
+    <img src="fotos/casa-arces.jpg" alt="Casa Arces 3">
+    <div class="property-content">
+      <div class="property-price">€ 28.000</div>
+      <h3>Calle Arces 3, Zalamea de la Serena</h3>
+      <div class="property-info">
+        <span>2 habitaciones</span>
+        <span>2 baños</span>
+        <span>140 m²</span>
+        <span>Terraza</span>
+        <span>No Ascensor</span>
+      </div>
+      <div class="property-description">
+        Casa adosada ideal para reformar o invertir. Ubicada en una zona tranquila y con posibilidades. Espaciosa y muy bien situada.
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <footer>
