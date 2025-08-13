@@ -57,7 +57,6 @@
       max-width: 600px;
       height: 300px;
       border: 0;
-      margin-top: 10px;
     }
     footer {
       background-color: #333;
@@ -67,7 +66,7 @@
     }
     .instagram-button {
       display: inline-block;
-      background-color: red; /* BOTÓN ROJO */
+      background-color: red;
       color: white;
       padding: 10px 15px;
       border-radius: 5px;
@@ -83,25 +82,9 @@
       text-decoration: underline;
     }
     /* Carrusel y contacto */
-    .property-card {
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 15px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      text-align: left;
-    }
-    .carousel {
-      position: relative;
-      max-width: 100%;
-      margin-bottom: 15px;
-    }
-    .carousel-inner img {
-      width: 100%;
-      display: none;
-      border-radius: 10px;
-    }
+    .property-card { max-width: 600px; margin: 0 auto; text-align: left; background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+    .carousel { position: relative; max-width: 100%; margin-bottom: 15px; }
+    .carousel-inner img { width: 100%; display: none; border-radius: 10px; }
     .carousel-inner img.active { display: block; }
     .prev, .next {
       position: absolute;
@@ -128,7 +111,7 @@
     }
     .contact-buttons a.call { background-color: #555; }
     .contact-buttons a.email { background-color: #0072c6; }
-    .contact-buttons a.instagram { background-color: red; }
+    .contact-buttons a.instagram { background-color: #C13584; }
     .contact-buttons a.whatsapp { background-color: #25D366; }
     /* Responsive */
     @media (max-width: 600px) {
@@ -189,6 +172,7 @@
         <img src="https://drive.google.com/uc?export=view&id=1LaFuS53fyW_L6aAJbh6b3yJ6KzyvNquJ" alt="Foto 2">
         <img src="https://drive.google.com/uc?export=view&id=1L5QGstHrqFCY_pgxF9KPlwZem0E_UOQx" alt="Foto 3">
         <img src="https://drive.google.com/uc?export=view&id=1zWEcUXkq7xPHe_sImg3qeqGmDOLXdZU5" alt="Foto 4">
+        <img src="https://drive.google.com/uc?export=view&id=16kZeawNAJ0Hg7EkVw-SVktxwu5P_tM4G" alt="Foto 5">
       </div>
       <button class="prev">&#10094;</button>
       <button class="next">&#10095;</button>
@@ -196,7 +180,7 @@
 
     <h3>🏡 Casa Céntrica en Zalamea de la Serena – ¡Espacio, Luz y Comodidad al Mejor Precio!</h3>
     <p>¿Buscas una vivienda amplia, céntrica y lista para entrar a vivir?  
-    En <strong>Calle San Francisco, 12</strong>, te espera esta maravillosa casa de 274 m² construidos sobre una parcela de 203 m², perfecta para familias que valoran el confort, la funcionalidad y la vida en el corazón de Zalamea de la Serena.</p>
+    En calle San Francisco, 12, te espera esta maravillosa casa de 274 m² construidos sobre una parcela de 203 m², perfecta para familias que valoran el confort, la funcionalidad y la vida en el corazón de Zalamea de la Serena.</p>
 
     <ul>
       <li>🛏 <strong>6 dormitorios</strong></li>
@@ -212,45 +196,37 @@
     <p><strong>💰 Precio:</strong> 180.000 € <em>(¡negociables!)</em></p>
 
     <div class="contact-buttons">
-      <a class="call" href="tel:+34636586791">Llamar</a>
-      <a class="email" href="mailto:inmobiliariazalamea@gmail.com">Email</a>
-      <a class="instagram" href="https://instagram.com/inmobiliariazalamea" target="_blank">Instagram</a>
-      <a class="whatsapp" href="https://wa.me/34636586791?text=Estoy%20interesado%20en%20la%20casa%20de%20Calle%20San%20Francisco%2012">WhatsApp</a>
+      <a class="whatsapp" href="https://wa.me/34636586791?text=Estoy%20interesado%20en%20la%20casa%20de%20la%20Calle%20San%20Francisco,%2012" target="_blank">💬 WhatsApp</a>
+      <a class="call" href="tel:+34636586791">📞 Llamar</a>
+      <a class="email" href="mailto:inmobiliariazalamea@gmail.com">📧 Email</a>
+      <a class="instagram" href="https://instagram.com/inmobiliariazalamea" target="_blank">📲 Instagram</a>
     </div>
-
-    <p>📍 Ubicación de la casa:</p>
-    <iframe
-      src="https://www.google.com/maps?q=Calle+San+Francisco,+12,+Zalamea+de+la+Serena&output=embed"
-      allowfullscreen
-      loading="lazy"
-    ></iframe>
-
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2025 Inmobiliaria Zalamea. Todos los derechos reservados.</p>
+  <p>© 2025 Inmobiliaria Zalamea. Todos los derechos reservados.</p>
 </footer>
 
 <script>
-  const carousel = document.querySelectorAll('.carousel');
-  carousel.forEach(car => {
-    const images = car.querySelectorAll('img');
-    let current = 0;
-    const prev = car.querySelector('.prev');
-    const next = car.querySelector('.next');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+  const images = document.querySelectorAll('.carousel-inner img');
+  let current = 0;
 
-    prev.addEventListener('click', () => {
-      images[current].classList.remove('active');
-      current = (current - 1 + images.length) % images.length;
-      images[current].classList.add('active');
-    });
+  function showImage(index) {
+    images.forEach(img => img.classList.remove('active'));
+    images[index].classList.add('active');
+  }
 
-    next.addEventListener('click', () => {
-      images[current].classList.remove('active');
-      current = (current + 1) % images.length;
-      images[current].classList.add('active');
-    });
+  prev.addEventListener('click', () => {
+    current = (current === 0) ? images.length - 1 : current - 1;
+    showImage(current);
+  });
+
+  next.addEventListener('click', () => {
+    current = (current === images.length - 1) ? 0 : current + 1;
+    showImage(current);
   });
 </script>
 
