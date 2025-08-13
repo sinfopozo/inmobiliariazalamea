@@ -2,147 +2,173 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inmobiliaria Zalamea</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4f4f4;
+      padding: 0;
+      background-color: #f8f8f8;
       color: #333;
     }
-    header {
-      background-color: red;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header .header-content {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-    }
-    header img {
-      width: 120px;
-      max-width: 100%;
-      height: auto;
-    }
-    header h1 {
-      font-size: 36px;
-      margin: 0;
-    }
-    nav {
-      background-color: #222;
+
+    header, footer {
+      background-color: #003366;
       color: white;
       text-align: center;
       padding: 15px 0;
-      flex-wrap: wrap;
     }
-    nav a {
-      display: inline-block;
-      color: white;
-      margin: 5px 15px;
-      text-decoration: none;
-      font-weight: bold;
+
+    h1, h2, h3 {
+      margin: 0 0 10px 0;
     }
+
     section {
       padding: 20px;
-      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    iframe {
+
+    .property-card p, .property-card ul {
+      line-height: 1.6;
+    }
+
+    .property-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .property-card li {
+      margin-bottom: 5px;
+    }
+
+    .carousel {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .carousel-inner img {
       width: 100%;
-      max-width: 600px;
-      height: 300px;
-      border: 0;
+      display: none;
+      border-radius: 10px;
     }
-    footer {
-      background-color: #333;
+
+    .carousel-inner img.active {
+      display: block;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
       color: white;
-      text-align: center;
-      padding: 20px;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 50%;
     }
-    .instagram-button {
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .contact-buttons a {
       display: inline-block;
-      background-color: red;
-      color: white;
+      margin: 5px 5px 0 0;
       padding: 10px 15px;
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
       border-radius: 5px;
-      text-decoration: none;
       font-weight: bold;
-      margin-top: 10px;
     }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 24px;
-      }
-      nav {
-        font-size: 14px;
-      }
-    }
+
+    .contact-buttons a.email { background-color: #0072c6; }
+    .contact-buttons a.call { background-color: #555; }
+    .contact-buttons a.instagram { background-color: #C13584; }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="header-content">
-    <img src="FOTO3.png" alt="Logo" />
-    <div>
-      <h1>Inmobiliaria Zalamea</h1>
-      <p>Encuentra tu próximo hogar con nosotros</p>
+  <header>
+    <h1>Inmobiliaria Zalamea</h1>
+  </header>
+
+  <section id="fincas-urbanas">
+    <h2>Fincas Urbanas</h2>
+
+    <div class="property-card">
+      <div class="carousel">
+        <div class="carousel-inner">
+          <img src="https://drive.google.com/uc?export=view&id=1ikmvOVPNgp-wRUw1cPBsk_MVVWLffIq1" class="active" alt="Foto 1">
+          <img src="https://drive.google.com/uc?export=view&id=1LaFuS53fyW_L6aAJbh6b3yJ6KzyvNquJ" alt="Foto 2">
+          <img src="https://drive.google.com/uc?export=view&id=1L5QGstHrqFCY_pgxF9KPlwZem0E_UOQx" alt="Foto 3">
+          <img src="https://drive.google.com/uc?export=view&id=1zWEcUXkq7xPHe_sImg3qeqGmDOLXdZU5" alt="Foto 4">
+          <img src="https://drive.google.com/uc?export=view&id=1L5QGstHrqFCY_pgxF9KPlwZem0E_UOQx" alt="Foto 5">
+          <img src="https://drive.google.com/uc?export=view&id=16kZeawNAJ0Hg7EkVw-SVktxwu5P_tM4G" alt="Foto 6">
+        </div>
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+
+      <h3>🏡 Casa Céntrica en Zalamea de la Serena – ¡Espacio, Luz y Comodidad al Mejor Precio!</h3>
+      <p>¿Buscas una vivienda amplia, céntrica y lista para entrar a vivir?  
+      En calle San Francisco, 12, te espera esta maravillosa casa de 274 m² construidos sobre una parcela de 203 m², perfecta para familias que valoran el confort, la funcionalidad y la vida en el corazón de Zalamea de la Serena.</p>
+
+      <ul>
+        <li>🛏 <strong>6 dormitorios:</strong> espaciosos, luminosos y versátiles.</li>
+        <li>🛁 <strong>3 baños completos:</strong> funcionales y cómodos para el día a día.</li>
+        <li>🛋 <strong>2 salones:</strong> ideales para disfrutar en familia o recibir visitas.</li>
+        <li>🍳 <strong>Cocina amueblada:</strong> lista para preparar tus mejores recetas.</li>
+        <li>🌞 <strong>Terraza soleada:</strong> perfecta para relajarte o compartir momentos al aire libre.</li>
+        <li>🏡 <strong>Patio interior:</strong> con encanto y privacidad.</li>
+        <li>📦 <strong>Trastero:</strong> espacio extra para almacenaje.</li>
+        <li>🔨 <strong>Reforma integral:</strong> vivienda en muy buen estado, lista para entrar a vivir.</li>
+      </ul>
+
+      <p>💫 Gracias a su ubicación céntrica, tendrás todos los servicios a un paso: tiendas, colegios, centros de salud y vida social.</p>
+      <p><strong>💰 Precio:</strong> 180.000 € <em>(¡negociables!)</em></p>
+
+      <div class="contact-buttons">
+        <a href="tel:+34636586791" class="call">📞 Llamar</a>
+        <a href="mailto:inmobiliariazalamea@gmail.com" class="email">📧 Email</a>
+        <a href="https://instagram.com/inmobiliariazalamea" target="_blank" class="instagram">📷 Instagram</a>
+        <a href="https://wa.me/34636586791?text=Hola!%20Estoy%20interesado%20en%20la%20Casa%20Céntrica%20en%20Zalamea%20de%20la%20Serena" target="_blank">💬 WhatsApp</a>
+      </div>
     </div>
-  </div>
-</header>
+  </section>
 
-<nav>
-  <a href="#inicio">Inicio</a>
-  <a href="#fincas-rusticas">Fincas Rústicas</a>
-  <a href="#fincas-urbanas">Fincas Urbanas</a>
-</nav>
+  <footer>
+    <p>&copy; 2025 Inmobiliaria Zalamea. Todos los derechos reservados.</p>
+  </footer>
 
-<section id="inicio">
-  <h2>Bienvenido</h2>
-  <p>Gracias por visitar Inmobiliaria Zalamea. Contáctanos o visítanos.</p>
-  <p>📧 <strong>Correo:</strong> <a href="mailto:inmobiliariazalamea@gmail.com">inmobiliariazalamea@gmail.com</a></p>
-  <p>📞 <strong>Teléfono:</strong> <a href="tel:+34636586791">636 586 791</a></p>
-  <p>📍 <strong>Ubicación:</strong> Plaza Calderón de la Barca, 27, 06430 Zalamea de la Serena</p>
-  <p>📲 También puedes encontrarnos en Instagram. Haz clic aquí abajo:</p>
-  <p>
-    <a class="instagram-button" href="https://instagram.com/inmobiliariazalamea" target="_blank">
-      Síguenos en Instagram
-    </a>
-  </p>
-  <iframe
-    src="https://www.google.com/maps?q=Plaza+Calderón+de+la+Barca,+27,+06430+Zalamea+de+la+Serena,+Badajoz&output=embed"
-    allowfullscreen
-    loading="lazy"
-  ></iframe>
-</section>
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll('.carousel-inner img');
+    const total = slides.length;
 
-<section id="fincas-rusticas">
-  <h2>Fincas Rústicas</h2>
-  <p>Próximamente publicaremos nuestras fincas rústicas disponibles para la venta.</p>
-</section>
+    document.querySelector('.next').addEventListener('click', () => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % total;
+      slides[index].classList.add('active');
+    });
 
-<section id="fincas-urbanas">
-  <h2>Fincas Urbanas</h2>
-  <p>Próximamente publicaremos nuestras fincas urbanas disponibles para la venta.</p>
-</section>
-
-<footer>
-  <p>📧 inmobiliariazalamea@gmail.com | 📞 636 586 791</p>
-</footer>
+    document.querySelector('.prev').addEventListener('click', () => {
+      slides[index].classList.remove('active');
+      index = (index - 1 + total) % total;
+      slides[index].classList.add('active');
+    });
+  </script>
 
 </body>
 </html>
-
