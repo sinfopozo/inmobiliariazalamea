@@ -1,70 +1,52 @@
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inmobiliaria Zalamea</title>
+<section id="fincas-urbanas">
+  <h2>Fincas Urbanas</h2>
+
+  <div class="property-card">
+    <!-- Carrusel de imágenes -->
+    <div class="carousel">
+      <div class="carousel-inner">
+        <img src="https://drive.google.com/uc?export=view&id=1ikmvOVPNgp-wRUw1cPBsk_MVVWLffIq1" class="active" alt="Foto 1">
+        <img src="https://drive.google.com/uc?export=view&id=1LaFuS53fyW_L6aAJbh6b3yJ6KzyvNquJ" alt="Foto 2">
+        <img src="https://drive.google.com/uc?export=view&id=1L5QGstHrqFCY_pgxF9KPlwZem0E_UOQx" alt="Foto 3">
+        <img src="https://drive.google.com/uc?export=view&id=1zWEcUXkq7xPHe_sImg3qeqGmDOLXdZU5" alt="Foto 4">
+        <img src="https://drive.google.com/uc?export=view&id=1L5QGstHrqFCY_pgxF9KPlwZem0E_UOQx" alt="Foto 5">
+        <img src="https://drive.google.com/uc?export=view&id=16kZeawNAJ0Hg7EkVw-SVktxwu5P_tM4G" alt="Foto 6">
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+    <h3>🏡 Casa Céntrica en Zalamea de la Serena – ¡Espacio, Luz y Comodidad al Mejor Precio!</h3>
+    <p>¿Buscas una vivienda amplia, céntrica y lista para entrar a vivir?  
+    En calle San Francisco, 12, te espera esta maravillosa casa de 274 m² construidos sobre una parcela de 203 m², perfecta para familias que valoran el confort, la funcionalidad y la vida en el corazón de Zalamea de la Serena.</p>
+
+    <ul>
+      <li>🛏 <strong>6 dormitorios</strong></li>
+      <li>🛁 <strong>3 baños completos</strong></li>
+      <li>🛋 <strong>2 salones</strong></li>
+      <li>🍳 <strong>Cocina amueblada</strong></li>
+      <li>🌞 <strong>Terraza soleada</strong></li>
+      <li>🏡 <strong>Patio interior</strong></li>
+      <li>📦 <strong>Trastero</strong></li>
+      <li>🔨 <strong>Reforma integral</strong></li>
+    </ul>
+
+    <p><strong>💰 Precio:</strong> 180.000 € <em>(¡negociables!)</em></p>
+
+    <div class="contact-buttons">
+      <a href="tel:+34636586791" class="call">📞 Llamar</a>
+      <a href="mailto:inmobiliariazalamea@gmail.com" class="email">📧 Email</a>
+      <a href="https://instagram.com/inmobiliariazalamea" target="_blank" class="instagram">📷 Instagram</a>
+      <a href="https://wa.me/34636586791?text=Hola!%20Estoy%20interesado%20en%20la%20Casa%20Céntrica%20en%20Zalamea%20de%20la%20Serena" target="_blank" class="whatsapp">💬 WhatsApp</a>
+    </div>
+  </div>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
-      color: #333;
-    }
-
-    header, footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-    }
-
-    h1, h2, h3 {
-      margin: 0 0 10px 0;
-    }
-
-    section {
-      padding: 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      background-color: white;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .property-card p, .property-card ul {
-      line-height: 1.6;
-    }
-
-    .property-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .property-card li {
-      margin-bottom: 5px;
-    }
-
-    .carousel {
-      position: relative;
-      max-width: 100%;
-      overflow: hidden;
-      margin-bottom: 15px;
-    }
-
-    .carousel-inner img {
-      width: 100%;
-      display: none;
-      border-radius: 10px;
-    }
-
-    .carousel-inner img.active {
-      display: block;
-    }
-
+    /* Estilos del carrusel */
+    .carousel { position: relative; max-width: 100%; margin-bottom: 15px; }
+    .carousel-inner img { width: 100%; display: none; border-radius: 10px; }
+    .carousel-inner img.active { display: block; }
     .prev, .next {
       position: absolute;
       top: 50%;
@@ -77,80 +59,24 @@
       font-size: 18px;
       border-radius: 50%;
     }
-
     .prev { left: 10px; }
     .next { right: 10px; }
 
+    /* Botones de contacto */
     .contact-buttons a {
       display: inline-block;
       margin: 5px 5px 0 0;
       padding: 10px 15px;
-      background-color: #25D366;
       color: white;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
     }
-
-    .contact-buttons a.email { background-color: #0072c6; }
     .contact-buttons a.call { background-color: #555; }
+    .contact-buttons a.email { background-color: #0072c6; }
     .contact-buttons a.instagram { background-color: #C13584; }
+    .contact-buttons a.whatsapp { background-color: #25D366; }
   </style>
-</head>
-<body>
-
-  <header>
-    <h1>Inmobiliaria Zalamea</h1>
-  </header>
-
-  <section id="fincas-urbanas">
-    <h2>Fincas Urbanas</h2>
-
-    <div class="property-card">
-      <div class="carousel">
-        <div class="carousel-inner">
-          <img src="https://drive.google.com/uc?export=view&id=1ikmvOVPNgp-wRUw1cPBsk_MVVWLffIq1" class="active" alt="Foto 1">
-          <img src="https://drive.google.com/uc?export=view&id=1LaFuS53fyW_L6aAJbh6b3yJ6KzyvNquJ" alt="Foto 2">
-          <img src="https://drive.google.com/uc?export=view&id=1L5QGstHrqFCY_pgxF9KPlwZem0E_UOQx" alt="Foto 3">
-          <img src="https://drive.google.com/uc?export=view&id=1zWEcUXkq7xPHe_sImg3qeqGmDOLXdZU5" alt="Foto 4">
-          <img src="https://drive.google.com/uc?export=view&id=1L5QGstHrqFCY_pgxF9KPlwZem0E_UOQx" alt="Foto 5">
-          <img src="https://drive.google.com/uc?export=view&id=16kZeawNAJ0Hg7EkVw-SVktxwu5P_tM4G" alt="Foto 6">
-        </div>
-
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-      </div>
-
-      <h3>🏡 Casa Céntrica en Zalamea de la Serena – ¡Espacio, Luz y Comodidad al Mejor Precio!</h3>
-      <p>¿Buscas una vivienda amplia, céntrica y lista para entrar a vivir?  
-      En calle San Francisco, 12, te espera esta maravillosa casa de 274 m² construidos sobre una parcela de 203 m², perfecta para familias que valoran el confort, la funcionalidad y la vida en el corazón de Zalamea de la Serena.</p>
-
-      <ul>
-        <li>🛏 <strong>6 dormitorios:</strong> espaciosos, luminosos y versátiles.</li>
-        <li>🛁 <strong>3 baños completos:</strong> funcionales y cómodos para el día a día.</li>
-        <li>🛋 <strong>2 salones:</strong> ideales para disfrutar en familia o recibir visitas.</li>
-        <li>🍳 <strong>Cocina amueblada:</strong> lista para preparar tus mejores recetas.</li>
-        <li>🌞 <strong>Terraza soleada:</strong> perfecta para relajarte o compartir momentos al aire libre.</li>
-        <li>🏡 <strong>Patio interior:</strong> con encanto y privacidad.</li>
-        <li>📦 <strong>Trastero:</strong> espacio extra para almacenaje.</li>
-        <li>🔨 <strong>Reforma integral:</strong> vivienda en muy buen estado, lista para entrar a vivir.</li>
-      </ul>
-
-      <p>💫 Gracias a su ubicación céntrica, tendrás todos los servicios a un paso: tiendas, colegios, centros de salud y vida social.</p>
-      <p><strong>💰 Precio:</strong> 180.000 € <em>(¡negociables!)</em></p>
-
-      <div class="contact-buttons">
-        <a href="tel:+34636586791" class="call">📞 Llamar</a>
-        <a href="mailto:inmobiliariazalamea@gmail.com" class="email">📧 Email</a>
-        <a href="https://instagram.com/inmobiliariazalamea" target="_blank" class="instagram">📷 Instagram</a>
-        <a href="https://wa.me/34636586791?text=Hola!%20Estoy%20interesado%20en%20la%20Casa%20Céntrica%20en%20Zalamea%20de%20la%20Serena" target="_blank">💬 WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Inmobiliaria Zalamea. Todos los derechos reservados.</p>
-  </footer>
 
   <script>
     let index = 0;
@@ -169,6 +95,4 @@
       slides[index].classList.add('active');
     });
   </script>
-
-</body>
-</html>
+</section>
